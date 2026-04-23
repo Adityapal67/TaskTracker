@@ -1,40 +1,99 @@
-# Task Tracker
+🚀 Task Tracker API
 
-A simple **Task Management REST API** built with **Spring Boot**, **JPA**, and **MySQL**.  
-This project allows you to create, update, retrieve, and delete tasks with status tracking.
+A clean and scalable Task Management REST API built with Spring Boot, JPA, and MySQL — designed to demonstrate solid backend fundamentals and real-world API design.
 
----
+✨ Why This Project?
 
-## Table of Contents
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [API Endpoints](#api-endpoints)
-- [Database Configuration](#database-configuration)
-- [Future Improvements](#future-improvements)
-- [License](#license)
+Managing tasks is simple—until it isn’t.
 
----
+This project focuses on building a robust backend system that handles task lifecycle efficiently, using clean architecture and REST principles. It’s not just CRUD—it’s about structuring things the right way.
 
-## Features
-- Create a new task
-- Retrieve all tasks
-- Retrieve tasks by status
-- Update task status
-- Delete a task
-- Simple and clean REST API structure
+⚡ Key Features
+📝 Create and manage tasks effortlessly
+📊 Filter tasks by status (e.g., Pending, Completed)
+🔄 Update task status dynamically
+🗑️ Delete tasks
+🧱 Clean layered architecture (Controller → Service → Repository)
+⚡ Fast and lightweight REST API
+🛠️ Tech Stack
+Layer	Technology
+Language	Java 17+
+Framework	Spring Boot
+ORM	Spring Data JPA (Hibernate)
+Database	MySQL
+Build Tool	Maven
+Persistence	Jakarta Persistence API
+🧠 Architecture Overview
 
----
+This project follows a layered architecture:
 
-## Technology Stack
-- Java 17+
-- Spring Boot
-- Spring Data JPA
-- MySQL
-- Maven
-- Jakarta Persistence (JPA)
-- Optional: Lombok (not used currently)
+Controller → Service → Repository → Database
+Controller → Handles HTTP requests
+Service → Business logic
+Repository → Data access via JPA
+Database → MySQL storage
+📁 Project Structure
+src/
+ └── main/
+     ├── java/
+     │   └── com/tasktracker/
+     │       ├── controller/
+     │       ├── service/
+     │       ├── repository/
+     │       └── model/
+     └── resources/
+         └── application.properties
+🚀 Getting Started
+✅ Prerequisites
+Java 17+
+Maven
+MySQL
+🔧 Setup Instructions
+# Clone the repository
+git clone https://github.com/Adityapal67/TaskTracker.git
 
----
-https://roadmap.sh/projects/task-tracker
+# Navigate into project
+cd task-tracker
+🗄️ Database Configuration
+
+Update your application.properties:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/task_db
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+▶️ Run the Application
+mvn spring-boot:run
+
+Server will start at:
+
+http://localhost:8080
+🔌 API Endpoints
+📌 Create Task
+POST /api/tasks
+📋 Get All Tasks
+GET /api/tasks
+🔍 Get Tasks by Status
+GET /api/tasks/status/{status}
+🔄 Update Task Status
+PUT /api/tasks/{id}
+❌ Delete Task
+DELETE /api/tasks/{id}
+🧪 Testing
+
+You can test the API using:
+
+Postman
+cURL
+Thunder Client (VS Code)
+📈 Future Improvements
+🔐 Add authentication (JWT-based security)
+📅 Add due dates & reminders
+📊 Add pagination & sorting
+📡 Integrate frontend (React/Angular)
+📄 Add Swagger API documentation
+🧑‍💻 Author
+
+Aditya Pal
